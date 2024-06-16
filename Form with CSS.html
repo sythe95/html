@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="file"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .radio-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h1>Application Form</h1>
+        <p><b>Please fill all the necessary fields properly as wrong input can lead to direct rejection.</b></p>
+        
+        <label for="name">Full Name:</label>
+        <input type="text" name="name" id="name">
+        
+        <label for="phone">Phone Number:</label>
+        <input type="tel" name="phone" id="phone">
+        
+        <label for="email">Email Id:</label>
+        <input type="email" name="email" id="email">
+        
+        <div class="radio-group">
+            <label for="gend">Gender:</label>
+            <div>
+                <input type="radio" name="gender" value="Male" id="gend-male">Male 
+                <input type="radio" name="gender" value="Female" id="gend-female">Female
+            </div>
+        </div>
+        
+        <label for="city">City:</label>
+        <select name="city" id="city">
+            <option value="Pune">Pune</option>
+            <option value="Kolh">Kolhapur</option>
+            <option value="Mum">Mumbai</option>
+            <option value="Nag">Nagpur</option>
+            <option value="Ben">Bangalore</option>
+            <option value="Hyd">Hyderabad</option>
+        </select>
+        
+        <label for="file">Resume:</label>
+        <input type="file" name="file" id="file">
+        
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
